@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="style.css" />
+    <title>Speak it Up</title>
+</head>
+<body>
+  <!-- ==============Header =================-->
+    <div id="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+            <!-- logo和標題 -->
+            <nav class="navbar navbar-light bg-danger">
+                <a class="navbar-brand text-white" href="#">
+                  <!-- <img src="https://github.com/sun0722a/yaoshula/blob/master/src/logo/logo_trans_250px.png?raw=true" width="50" height="50" class="d-inline-block align-top" alt=""> -->
+                  要抒啦！
+                </a>
+              </nav>
+            <!-- 收縮成漢堡 -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- ============left menu=================== -->
+              <ul class="navbar-nav mr-auto">
+                  <!-- 下拉一 -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      論壇
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">天使版</a>
+                      <a class="dropdown-item" href="#">惡魔版</a>
+                  </li>
+                  <!-- 下拉二 -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      商城
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">商城首頁</a>
+                      <a class="dropdown-item" href="#">我的購物車</a>
+                      <a class="dropdown-item" href="#">歷史訂單</a>
+                  </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    關於
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">創站理念</a>
+                    <a class="dropdown-item" href="#">團隊介紹</a>
+                    <a class="dropdown-item" href="#">聯絡我們</a>
+                </li>
+              </ul>
+
+          <!-- ============right menu=================== -->
+          <ul class="navbar-nav ml-auto ">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">會員登入</a>
+            </li>
+          </ul>
+            </div>
+          </nav>
+    </div>
+
+    <!-- ===============carousel ==================-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <img src="https://fakeimg.pl/1000x480/?text=天使板&font=noto" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>需要拍拍嗎？進天使板來碗暖呼呼的心靈雞湯，保證你元氣大增！</h5>
+            <p>立即前往</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://fakeimg.pl/1000x480/?text=惡魔板&font=noto" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>負能量爆炸嗎？惡魔板陪你笑看人生，在這裡你可以盡情釋放負能量！</h5>
+            <p>立即前往</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://fakeimg.pl/1000x480/?text=商城&font=noto" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>隔離閒得發慌，需要舞台展示新台幣的力量嗎？快來看看有什麼有趣的好物吧！</h5>
+            <p>立即前往</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+<!-- =======================main ===================-->
+        <div class="main ">
+            <div class="content text-center text-white shadow-lg d-flex align-items-center ">
+                <!-- title ============-->
+                <div class="row">
+                  <div class="mx-auto col-12 col-sm-12 col-lg-7">
+                    <h1 id="sign-up-now">好想抒一下？馬上登入！</h1>
+                  </div>
+                   <!-- sub title ===============-->
+                  <div class="mx-auto col-10 col-sm-8 col-lg-6 mt-1">
+                    <a id="to-register" class="btn btn-light" href="#">還沒有帳號？立即註冊！</a>
+                  </div>
+                </div>
+              </div>
+        </div>
+<!-- =================hot news=================-->
+
+<div class="hotnews">
+  <p id="hot-news-title" class="text-center text-white pt-5 pb-3">熱門看板</p>
+  <div class="container">
+    <div class="row">
+
+      <div class="col-12 col-md-4  mt-4">
+        <div class="card">
+          <img
+            src="https://twgreatdaily.com/images/elastic/vby/vbytPm0BJleJMoPMurlx.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">是兩條線><</h5>
+            <p class="card-text">
+              生理期沒來一直想說沒差，朋友今天陪我去藥局買，結果...該怎麼辦？我才16歲...爸媽一定會殺ㄌ我><
+            </p>
+            <a href="#" class="btn btn-danger">前往天使板</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4  mt-4">
+        <div class="card">
+          <img
+            src="https://i.imgur.com/jMGTZmz.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">傳說中的豹紋口罩@@</h5>
+            <p class="card-text">
+              天還沒亮就去排隊，排了90分鐘，打開一看，ㄍ...阿中你說我出門到底該戴還是不戴？
+            </p>
+            <a href="#" class="btn btn-warning">前往惡魔板</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4  mt-4">
+        <div class="card">
+          <img
+            src="https://static.boneshop.com/media/catalog/product/cache/1/image/800x/9df78eab33525d08d6e5fb8d27136e95/e/s/essentialoil-lavender-01_3.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">法國薰衣草精油</h5>
+            <p class="card-text">
+              來了來了！南法普羅旺斯的氣息飄過來了！吸上兩口一夜好眠，限時特惠只要5000元~~
+            </p>
+            <a href="#" class="btn btn-info">前往商城</a>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+<!--================= subscribe================= -->
+<div class="bg-warning text-center pt-5">
+  <div class="icon-box">						
+    <img src="https://github.com/sun0722a/yaoshula/blob/master/src/logo/logo_trans_92px.png?raw=true" alt="logo" srcset="">
+  </div>
+</div>
+<div class="text-center bg-warning">
+  <h3 class="font-weight-bolder mb-3">SUBSCRIBE NOW</h3>	
+  <p class="mb-3">不想錯過任何有趣的話題？這就訂閱我們的電子報，還有超優惠折價券送給你！</p>
+  <div class="input-group d-flex justify-content-center pb-5">
+    <input id="subscribe-email" type="email" class="" placeholder="Enter your email here" required>
+    <span class="input-group-btn">
+      <input type="submit" id="btn-to-subscribe" class="btn btn-secondary" value="立刻訂閱">
+    </span>
+  </div>
+</div>
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact section-bg">
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-up">
+        <h2>Contact Us</h2>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-5 d-flex align-items-stretch" data-aos="fade-right">
+          <div class="info">
+            <div class="address">
+              <i class="icofont-google-map"></i>
+              <h4>Location:</h4>
+              <p>A108 Adam Street, New York, NY 535022</p>
+            </div>
+
+            <div class="email">
+              <i class="icofont-envelope"></i>
+              <h4>Email:</h4>
+              <p>info@example.com</p>
+            </div>
+
+            <div class="phone">
+              <i class="icofont-phone"></i>
+              <h4>Call:</h4>
+              <p>+1 5589 55488 55s</p>
+            </div>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7595495578307!2d121.53330335070427!3d25.042232883889806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a97d255598df%3A0x47ea748e8f3f53aa!2z5ZyL56uL6Ie65YyX56eR5oqA5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1586192587286!5m2!1szh-TW!2stw" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+          </div>
+
+        </div>
+
+        <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-left">
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="name">Your Name</label>
+                <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="name">Your Email</label>
+                <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validate"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="name">Subject</label>
+              <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <div class="validate"></div>
+            </div>
+            <div class="form-group">
+              <label for="name">Message</label>
+              <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
+              <div class="validate"></div>
+            </div>           
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Contact Section -->
+        <!--========= footer================= -->
+        <!-- Footer -->
+<footer class="page-footer font-small stylish-color-dark pt-5">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-4 mx-auto">
+
+        <!-- Content -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">要抒啦！ 論壇&商城</h5>
+        <p>是個能夠預期回應溫度的論壇空間。無論感情、生活、工作、時事都可以聊，還附設購物商城「要買啦！💸」，各種新奇有趣的商品都在這裡。</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">論壇</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">天使版</a>
+          </li>
+          <li>
+            <a href="#!">惡魔版</a>
+          </li>
+          
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">商城</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">商城首頁</a>
+          </li>
+          <li>
+            <a href="#!">我的購物車</a>
+          </li>
+          <li>
+            <a href="#!">歷史訂單</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">關於我們</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">創站理念</a>
+          </li>
+          <li>
+            <a href="#!">團隊介紹</a>
+          </li>
+          <li>
+            <a href="#!">聯絡我們</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>  
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center pb-4">© 2020 Copyright © 2020 Speak It Up. All rights reserved
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+ <!-- ========================modal============================ -->
+ <!-- Modal for subscribe-->
+ <div class="modal fade" id="my-modal-subscribe" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel_sub" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel_sub">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>          
+      </div>
+    </div>
+  </div>
+</div>
+
+          <script
+          src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+          integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+          integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+          crossorigin="anonymous"
+        ></script>
+        <script src="main.js"></script>
+</html>

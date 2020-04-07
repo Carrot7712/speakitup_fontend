@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif !important; 
+}
+
+body {
+    position: relative;
+  }
+#header{
+    border-bottom: white 1px solid;
+    
+}
+.main{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 700px;
+    /* border:blue 2px solid; */
+    background: url(https://i.imgur.com/nUm6nx0.png);
+    background-size: cover;
+    /* background-position: center; */
+}
+.content{
+    background-color:rgba(255, 255, 255, 0.5);
+    width: 450px;
+    height: 350px;
+    margin-right: 150px;
+}
+#sign-up-now{
+    cursor: pointer;
+}
+#hot-news-title{
+    font-size: 3em;
+}
+.hotnews{
+    background-color:#0e2640;
+    padding-top: 50px;
+    padding-bottom: 150px;
+}
+.hotnews .card{
+    border: white 3px solid;
+    /* box-shadow:0 0 18px 5px rgba(255, 255, 255, 0.7); */
+    margin: 20px;
+}
+.hotnews img{
+    height: 300px;
+}
+#subscribe-email{
+    width: 30%;
+}
+
+
