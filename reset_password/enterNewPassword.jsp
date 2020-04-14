@@ -1,19 +1,21 @@
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="template_style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <!-- my css -->
   <link rel="stylesheet" href="style.css" />
-    <title>Register</title>
+    <title>Reset Password</title>
 </head>
 <body>
   <!-- ==============Header =================-->
     <div id="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+        <nav class="navbar navbar-expand-lg navbar-light bg-danger fixed-top">
             <!-- logo和標題 -->
             <nav class="navbar navbar-light bg-danger">
                 <a class="navbar-brand text-white" href="#">
@@ -70,54 +72,39 @@
     </div>
 
   <!-- ===main=== -->
-  <div class="container ">
+  <div class="container">
 
     <!-- Outer Row -->
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mt-5">
 
-      <div class="col-xl-10 col-lg-12 col-md-9">
+      <div class="col-xl-10 col-lg-12 col-md-9 mt-5">
 
-        <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card o-hidden border-0 shadow-lg my-5 ">
           <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row">
-              <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+              <div class="col-lg-6 d-none d-lg-block bg-password-image"></div>
               <div class="col-lg-6">
                 <div class="p-5">
                   <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">歡迎回來，要抒啦！</h1>
+                    <h1 class="h4 text-gray-900 mb-2">歡迎回來！要抒啦！</h1>
+                    <p class="mb-4">請重新設定您的密碼</p>
                   </div>
-                  <form class="user">
+                  <form class="user" action="<c:url value='/changepswd'  />" method="POST">
                     <div class="form-group">
-                      <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="輸入您的帳號"">
+                      <input type="password" name="password" class="form-control form-control-user"  placeholder="輸入新密碼">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="輸入您的密碼">
+                      <div class="checkPswd input-group mb-3">
+                      <input type="password" name="password" class="form-control form-control-user checked" placeholder="再輸入一次">
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-primary" type="button" id="button-addon"><i class='bx bxs-lock-open'></i></button>
                     </div>
-                    <div class="form-group">
-                      <div class="custom-control custom-checkbox small">
-                        <input type="checkbox" class="custom-control-input" id="customCheck">
-                        <label class="custom-control-label" for="customCheck">記住我</label>
-                      </div>
-                    </div>
-                    <a href=".." class="btn btn-primary btn-user btn-block">
-                      立即登入
-                    </a>
-                    <hr>
-                    <a href=".." class="btn btn-google btn-user btn-block">
-                      用Google帳號登入
-                    </a>
-                    <a href=".." class="btn btn-facebook btn-user btn-block">
-                      用Facebook帳號登入
-                    </a>
+                  </div>
+                    <button type="submit" class="btn btn-primary btn-user btn-block">確認</button>
                   </form>
                   <hr>
-                  <div class="text-center">
-                    <a class="small" href="..">忘記密碼了？幫你找找</a>
-                  </div>
-                  <div class="text-center">
-                    <a class="small" href="..">還沒有帳號？前往註冊</a>
-                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -246,5 +233,18 @@
           integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
           crossorigin="anonymous"
         ></script>
-        <script src="main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.compatibility.min.js"></script>
+
+        <script>
+          $(document).ready(function () {
+              $('#button-addon').click(function(){
+                 let changeType = $('.checked').attr('type')
+                 if(changeType == 'password'){
+                     $('.checked').attr('type','text')
+                 }else{
+                  $('.checked').attr('type','password')
+                 }
+              })
+          });
+      </script>
 </html>
