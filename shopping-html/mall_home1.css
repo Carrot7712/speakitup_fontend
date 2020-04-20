@@ -1,5 +1,5 @@
 /* 導覽列字型設定 */
-.navbar {
+*{
   font-family: "Noto Sans TC", sans-serif;
 }
 /* 搜尋欄內顏色 */
@@ -124,7 +124,7 @@ h1 {
 .black {
   width: 50%;
   min-height: 1200px;
-  background-color: black;
+  background-color:rgb(3,60,115); 
   padding-top: 200px;
   padding-bottom: 50px;
 }
@@ -132,7 +132,7 @@ h1 {
   padding: 50px;
   width: 90%;
   min-height: 80%;
-  background: rgb(255, 255, 0);
+  background: #ffc124;
   float: right;
   font-size: 2em;
   font-family: "Noto Sans TC", sans-serif;
@@ -151,7 +151,7 @@ h1 {
 .pink {
   width: 50%;
   min-height: 1200px;
-  background: pink;
+  background: rgb(247,99,5);
   padding-top: 200px;
 }
 
@@ -255,13 +255,6 @@ h1 {
 }
 
 /* 頁尾控制 */
-#footer {
-  display: block;
-}
-
-.dx {
-  background-color: pink;
-}
 
 .dy {
   padding: 50px 0px 50px;
@@ -364,4 +357,18 @@ h1 {
 
 .e6 {
   line-height: 20px;
+}
+
+#footer-introdution{
+  color: #ffffff
+}
+
+#hot-sales{
+  background-color: pink;
+}
+#first-area, .three_title{
+  background-color: #ffffff;
+}
+#recommend-product{
+ background-color: #FFC124;
 }
