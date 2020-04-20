@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif !important; 
+}
+
+body {
+    position: relative;
+  }
+.personal-page{
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+#header{
+    border-bottom: white 1px solid;
+}
+
+#boxHeadPicture img{
+    width: 120px;
+}
+

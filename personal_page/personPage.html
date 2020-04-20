@@ -1,0 +1,292 @@
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Personal Page</title>
+  </head>
+  <body>
+
+        <!-- ==============Header =================-->
+    <div id="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+            <!-- logo和標題 -->
+            <nav class="navbar navbar-light bg-danger">
+                <a class="navbar-brand text-white" href="#">
+                  <!-- <img src="https://github.com/sun0722a/yaoshula/blob/master/src/logo/logo_trans_250px.png?raw=true" width="50" height="50" class="d-inline-block align-top" alt=""> -->
+                  要抒啦！
+                </a>
+              </nav>
+            <!-- 收縮成漢堡 -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- ============left menu=================== -->
+              <ul class="navbar-nav mr-auto">
+                  <!-- 下拉一 -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      論壇
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">天使版</a>
+                      <a class="dropdown-item" href="#">惡魔版</a>
+                  </li>
+                  <!-- 下拉二 -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      商城
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">商城首頁</a>
+                      <a class="dropdown-item" href="#">我的購物車</a>
+                      <a class="dropdown-item" href="#">歷史訂單</a>
+                  </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    關於
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">創站理念</a>
+                    <a class="dropdown-item" href="#">團隊介紹</a>
+                    <a class="dropdown-item" href="#">聯絡我們</a>
+                </li>
+              </ul>
+
+          <!-- ============right menu=================== -->
+          <ul class="navbar-nav ml-auto ">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">會員登入</a>
+            </li>
+          </ul>
+            </div>
+          </nav>
+    </div>
+
+  <!-- ===main=== -->
+    <div class="container mt-5 personal-page">
+        <div class="row m-y-2 mt-5">
+          <!-- 左側欄 -->
+            <div class="col-lg-3 pull-lg-8 text-xs-center mt-5 d-flex flex-column align-items-center">
+              <!-- 編輯的按鈕 -->
+              <button class="btn btn-primary align-self-start" id="edit">編輯<i class='bx bx-edit ml-1'></i></button>
+              <div id="boxHeadPicture">
+                <!-- 大頭貼照 -->
+                <img src="https://icons-for-free.com/iconfiles/png/512/business+costume+male+man+office+user+icon-1320196264882354682.png" class="m-x-auto img-fluid img-circle" alt="avatar" id="headPicture">
+                </div>
+                <label class="custom-file">
+                  <!-- 上傳檔案 -->
+                  <div id="boxFileSelect">
+				<input name="memberMultipartFile" type="file"
+					style="visibility: hidden;" id="fileSelect"
+					value="${LoginOK.picture}" />
+                  </div>
+                </label>
+            </div>
+            <!-- 右側欄 -->
+            <div class="col-lg-9 push-lg-4 mt-5">
+
+                <div class="tab-content p-b-3">
+                        <h2 class="m-y-2">會員檔案</h2>
+
+                        <form role="form">
+                            <div class="form-group row">
+                                <label class="col-lg-2 col-form-label form-control-label personalTitle">帳號</label>
+                                <div class="col-lg-10">
+                                    <input class="form-control personal" type="text" value="${LoginOK.memberId}">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-lg-2 col-form-label form-control-label personalTitle">性別</label>
+                                <div class="col-lg-10">
+                                    <input class="form-control" type="text" value="${LoginOK.gender}">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-lg-2 col-form-label form-control-label personalTitle">E-mail</label>
+                                <div class="col-lg-10">
+                                    <input class="form-control personalUpdate" type="email" value="${LoginOK.email}">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-lg-2 col-form-label form-control-label">生日</label>
+                                <div class="col-lg-10">
+                                    <input class="form-control" type="text" value="${LoginOK.birthday}">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-lg-2 col-form-label form-control-label personalTitle">手機</label>
+                                <div class="col-lg-10">
+                                    <input class="form-control personalUpdate" type="url" value="${LoginOK.phone}">
+                                </div>
+                            </div>
+                            <div class="form-group row personalUpdate">
+                                <label class="col-lg-2 col-form-label form-control-label"></label>
+                                <div class="col-lg-4">
+                                    <input class="form-control" id="city" type="text" value="{LoginOK.city}" placeholder="City">
+                                </div>
+                                <div class="col-lg-4">
+                                    <input class="form-control" id="area" type="text" value="${LoginOK.area}" placeholder="State">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-lg-2 col-form-label form-control-label personalTitle">地址</label>
+                                <div class="col-lg-10">
+                                    <input class="form-control personalUpdate" id="address" type="text" value="" placeholder="${LoginOK.address}" >
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label"></label>
+                                <div class="col-lg-9">
+                                    <input type="submit" class="btn btn-secondary" id="btCancel" value="取消" style="visibility: hidden;"
+								name="cancel">
+                                    <input class="btn btn-primary" id="btSubmit" type="submit" value="儲存"
+								style="visibility: hidden;" >
+                                </div>
+                            </div>
+                        </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+        <!--========= footer================= -->
+        <!-- Footer -->
+        <footer class="page-footer font-small stylish-color-dark pt-5">
+
+            <!-- Footer Links -->
+            <div class="container text-center text-md-left">
+          
+              <!-- Grid row -->
+              <div class="row">
+          
+                <!-- Grid column -->
+                <div class="col-md-4 mx-auto">
+          
+                  <!-- Content -->
+                  <h5 class="font-weight-bold text-uppercase mt-3 mb-4">要抒啦！ 論壇&商城</h5>
+                  <p>是個能夠預期回應溫度的論壇空間。無論感情、生活、工作、時事都可以聊，還附設購物商城「要買啦！💸」，各種新奇有趣的商品都在這裡。</p>
+          
+                </div>
+                <!-- Grid column -->
+          
+                <hr class="clearfix w-100 d-md-none">
+          
+                <!-- Grid column -->
+                <div class="col-md-2 mx-auto">
+          
+                  <!-- Links -->
+                  <h5 class="font-weight-bold text-uppercase mt-3 mb-4">論壇</h5>
+          
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="#!">天使版</a>
+                    </li>
+                    <li>
+                      <a href="#!">惡魔版</a>
+                    </li>
+                    
+                  </ul>
+          
+                </div>
+                <!-- Grid column -->
+          
+                <hr class="clearfix w-100 d-md-none">
+          
+                <!-- Grid column -->
+                <div class="col-md-2 mx-auto">
+          
+                  <!-- Links -->
+                  <h5 class="font-weight-bold text-uppercase mt-3 mb-4">商城</h5>
+          
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="#!">商城首頁</a>
+                    </li>
+                    <li>
+                      <a href="#!">我的購物車</a>
+                    </li>
+                    <li>
+                      <a href="#!">歷史訂單</a>
+                    </li>
+                  </ul>
+          
+                </div>
+                <!-- Grid column -->
+          
+                <hr class="clearfix w-100 d-md-none">
+          
+                <!-- Grid column -->
+                <div class="col-md-2 mx-auto">
+          
+                  <!-- Links -->
+                  <h5 class="font-weight-bold text-uppercase mt-3 mb-4">關於我們</h5>
+          
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="#!">創站理念</a>
+                    </li>
+                    <li>
+                      <a href="#!">團隊介紹</a>
+                    </li>
+                    <li>
+                      <a href="#!">聯絡我們</a>
+                    </li>
+                  </ul>
+          
+                </div>
+                <!-- Grid column -->
+          
+              </div>
+              <!-- Grid row -->
+          
+            </div>  
+          
+            <!-- Copyright -->
+            <div class="footer-copyright text-center pb-4">© 2020 Copyright © 2020 Speak It Up. All rights reserved
+            </div>
+            <!-- Copyright -->
+          
+          </footer>
+          <!-- Footer -->
+    <!-- 下拉式地址 -->
+<script
+src="https://cdn.jsdelivr.net/npm/tw-city-selector@2.1.0/dist/tw-city-selector.min.js"></script>
+<!-- 下拉式地址 -->    
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script
+	src="updatePersonPage.js"></script> -->
+  </body>
+</html>
