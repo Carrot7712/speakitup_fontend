@@ -1,0 +1,367 @@
+/* 導覽列字型設定 */
+.navbar {
+  font-family: "Noto Sans TC", sans-serif;
+}
+/* 搜尋欄內顏色 */
+input::-webkit-input-placeholder {
+  color: #ffc124 !important;
+}
+/* 下拉式選單顏色 */
+.navbar-nav > li > .dropdown-menu {
+  background-color: #0275d8;
+}
+
+#title {
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  min-width: 350px;
+}
+#title img {
+  width: 100%;
+}
+
+/* 輪播設定 */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300");
+body {
+  background-color: #f2f2f2;
+}
+
+h1 {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.two_title {
+  width: 90%;
+  margin: 0px auto;
+}
+
+#myBtn {
+  z-index: 99;
+  /* 初始化不顯示 */
+  /* display: none; */
+  /* fixed = 畫面的絕對位置，所以會跟著跑 */
+  position: fixed;
+  /* 離下面30 pixel */
+  bottom: 30px;
+  /* 離右邊30 pixel */
+  right: 10px;
+  /* 半徑圓 */
+  border-radius: 30px;
+  /* 背景色 */
+  background-color: white;
+  /* 透明度 */
+  opacity: 0.5;
+  /* 游標指過去會變手指 */
+  cursor: pointer;
+
+  width: 50px;
+}
+/* 游標只上去會變灰色 */
+#myBtn:hover {
+  background-color: #555;
+}
+
+/* 控制輪播箭頭顏色 */
+.carousel-control-next,
+.carousel-control-prev {
+  filter: invert(100%);
+}
+
+#image1 {
+  width: 100%;
+  padding: 25px auto;
+  font-size: 2em;
+  white-space: nowrap;
+}
+
+#image2 {
+  width: 100%;
+  padding: 25px auto;
+  font-size: 2em;
+  white-space: nowrap;
+}
+
+.text {
+  font-size: 2.8em;
+  writing-mode: vertical-lr;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+#Hot_products {
+  font-size: 3em;
+  text-align: center;
+  margin-top: -50px;
+  font-weight: bold;
+  font-family: "Noto Sans TC", sans-serif;
+}
+/* 控制熱銷商品內的文字樣式 */
+.pictureStyle {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  padding: 50px;
+  justify-content: space-between;
+  font-size: 2em;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.All_Shop_Items {
+  font-size: 2em;
+  text-align: center;
+  padding: 10px;
+  margin: 60px;
+  margin-bottom: 0px;
+  font-family: "Noto Sans TC", sans-serif;
+}
+.three_title {
+  width: 90%;
+  margin: 0px auto;
+  display: flex;
+}
+.black {
+  width: 50%;
+  min-height: 1200px;
+  background-color: black;
+  padding-top: 200px;
+  padding-bottom: 50px;
+}
+.yallow {
+  padding: 50px;
+  width: 90%;
+  min-height: 80%;
+  background: rgb(255, 255, 0);
+  float: right;
+  font-size: 2em;
+  font-family: "Noto Sans TC", sans-serif;
+}
+.yallow > span:nth-child(1) {
+  display: inline-block;
+  margin-top: 50px;
+  padding-left: 50px;
+}
+.yallow > span:nth-child(2) {
+  display: inline-block;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+.pink {
+  width: 50%;
+  min-height: 1200px;
+  background: pink;
+  padding-top: 200px;
+}
+
+.white {
+  background: white;
+  width: 90%;
+  min-height: 50%;
+  padding-top: 200px;
+  font-size: 2em;
+  text-align: center;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.white > span:nth-child(1) {
+  display: inline-block;
+  margin-top: -150px;
+  margin-right: 20px;
+  padding: 50px;
+  text-align: right;
+}
+
+.white > span:nth-child(2) {
+  display: inline-block;
+  margin-top: 0px;
+  margin-left: 50px;
+}
+
+.therr_bottom {
+  width: 80%;
+  margin: 0px auto;
+  height: 200px;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 200px;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.recommend {
+  margin: 0px auto;
+  font-size: 2em;
+  text-align: center;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.four_title {
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.four_img {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.four_top {
+  display: flex;
+  justify-content: space-between;
+}
+.four_under {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 調整第四區塊內div的距離 */
+.four_title div {
+  margin-bottom: 10px;
+}
+
+.four_bottom {
+  font-size: 2em;
+  background-color: black;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.four_bottom a {
+  text-decoration: none; /* 移除超連結底線 */
+  padding: 10px;
+  color: white;
+}
+
+.four_bottom a:hover {
+  color: white;
+}
+
+/* 查詢按鈕文字顏色 */
+.btu-b:hover {
+  color: #0275d8 !important;
+}
+
+/* 商品外框 */
+.box-shadow {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: 0.5s;
+}
+/* 鼠標移到商品上時會放大 */
+.box-shadow:hover {
+  transform: scale(1.1, 1.1);
+}
+
+/* 頁尾控制 */
+#footer {
+  display: block;
+}
+
+.dx {
+  background-color: pink;
+}
+
+.dy {
+  padding: 50px 0px 50px;
+}
+
+.dw {
+  margin-top: 80px;
+}
+
+.ak {
+  max-width: 1920px;
+}
+
+.al {
+  min-width: 1024px;
+}
+
+.am {
+  margin: 0 auto;
+}
+
+.aj {
+  box-sizing: border-box;
+}
+
+.an {
+  padding: 0 80px;
+}
+
+.ao {
+  display: flex;
+  text-decoration: none;
+}
+
+.dz {
+  flex: 2;
+}
+
+.bv {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+
+.ar {
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.e0 {
+  -webkit-box-align: start;
+  align-items: flex-start;
+}
+
+.ba {
+  flex: 1;
+  padding-top: 40px;
+}
+
+.bb {
+  font-size: 16px;
+}
+
+.bc {
+  line-height: 24px;
+}
+
+.cj {
+  color: #ffffff;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.e2 {
+  margin-bottom: 24px;
+}
+
+.a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.dm {
+  margin-bottom: 16px;
+}
+
+.dt {
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.ao a:hover {
+  text-decoration: underline;
+  color: rgb(243, 1, 1);
+}
+
+.e5 {
+  font-size: 14px;
+}
+
+.e6 {
+  line-height: 20px;
+}

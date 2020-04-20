@@ -1,0 +1,204 @@
+/* 導覽列字型設定 */
+.navbar {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+/* 搜尋欄內顏色 */
+input::-webkit-input-placeholder {
+  color: #ffc124 !important;
+}
+
+/* 下拉式選單顏色 */
+.navbar-nav > li > .dropdown-menu {
+  background-color: #0275d8;
+}
+
+/* 頁尾設定  */
+/* 頁尾顏色 */
+.dx {
+  background-color: pink;
+}
+
+/* 頁尾範圍 */
+.dy {
+  padding: 50px 0px 50px;
+}
+
+/* 頁尾LOGO位置 */
+.an {
+  padding: 0 80px;
+}
+
+/* 頁尾文字橫向，而非直直一行 */
+.ao {
+  display: flex;
+  text-decoration: none;
+}
+
+/* 頁尾間距 */
+.dz {
+  flex: 2;
+}
+
+/* 文字橫向 */
+.bv {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+
+/* Pack flex items from the start */
+.e0 {
+  -webkit-box-align: start;
+  align-items: flex-start;
+}
+
+/* 控制文字離頁尾最上面的高度及位置 */
+.ba {
+  flex: 1;
+  padding-top: 40px;
+}
+
+/* 文字排版設置 */
+.bc {
+  line-height: 24px;
+}
+
+/* 文字顏色、字型 */
+.cj {
+  color: #ffffff;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+/* 文字與文字的距離 */
+.e2 {
+  margin-bottom: 24px;
+}
+
+/* 文字顏色、大小 */
+.dt {
+  color: inherit;
+  font-size: 1.5em;
+}
+
+/* 文字被點選時的顏色 */
+.ao a:hover {
+  text-decoration: underline;
+  color: rgb(243, 1, 1);
+}
+
+/* <!-- 置頂按鈕 設定 --> */
+#myBtn {
+  z-index: 99;
+  /* 初始化不顯示 */
+  /* display: none; */
+  /* fixed = 畫面的絕對位置，所以會跟著跑 */
+  position: fixed;
+  /* 離下面30 pixel */
+  bottom: 30px;
+  /* 離右邊30 pixel */
+  right: 10px;
+  /* 半徑圓 */
+  border-radius: 30px;
+  /* 背景色 */
+  /* background-color: white; */
+  /* 透明度 */
+  opacity: 0.5;
+  /* 游標指過去會變手指 */
+  cursor: pointer;
+  /* 控制按鈕寬度 */
+  width: 50px;
+}
+
+
+
+/* 商城頁面 */
+.jumbotron-bg {
+  background-image: url(https://images.pexels.com/photos/1660995/pexels-photo-1660995.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+  background-position: center 0;
+  background-size: cover;
+  min-height: 400px;
+}
+
+/* 文字後增加區塊 */
+.jumbotron-text {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* 商品外框 */
+.box-shadow {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+/* 鼠標移到商品上時會放大 */
+.box-shadow:hover {
+  transform: scale(1.05, 1.05);
+}
+
+/* 固定商品圖片大小 */
+.img_high {
+  height: 220px;
+}
+
+/* 左邊商品分類與導覽列的距離 */
+.sticky-element {
+  position: sticky;
+  top: 90px;
+}
+
+/* 分頁至中 */
+.pagination {
+  justify-content: center;
+}
+
+/* 商品篩選靠右 */
+#nav_info > ul {
+  display: inline-block;
+  list-style: none;
+  width: 80%;
+  white-space:nowrap;
+}
+
+/* 麵包屑位置 */
+#nav_info > ul > li {
+  display: inline-block;
+}
+
+/* 商品分類與圖片的距離 */
+#procen_text {
+  margin-top: -20px;
+}
+
+/* 統一字型 */
+.mall {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+/* 分頁控制 */
+.pagination a {
+  color: black;
+  /* float: left; */
+  padding: 8px 16px;
+  /* text-decoration: none; */
+  margin: 0 5px;
+}
+
+/* 商品分類 消除圓點 */
+#left_list ul {
+  list-style: none;
+  display: none;
+}
+
+/* 控制商品分類 次選項 距離 暫時不用 */
+/* #left_list li {
+  margin: 2px 0px 2px -20px;
+  border: 1px solid #f0f;
+} */
+
+/* 控制頁尾下拉式選單 */
+.YourLocation {
+  padding: 6px;
+  border: 1px solid #dfdfdf;
+}

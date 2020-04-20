@@ -1,0 +1,440 @@
+/* 導覽列字型設定 */
+.navbar {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+/* 搜尋欄內顏色 */
+input::-webkit-input-placeholder {
+  color: #ffc124 !important;
+}
+
+/* 下拉式選單顏色 */
+.navbar-nav > li > .dropdown-menu {
+  background-color: #0275d8;
+}
+
+/* 頁尾設定  */
+/* 頁尾顏色 */
+.dx {
+  background-color: pink;
+}
+
+/* 頁尾範圍 */
+.dy {
+  padding: 72px 0px 88px;
+}
+
+/* 頁尾LOGO位置 */
+.an {
+  padding: 0 80px;
+}
+
+/* 頁尾文字橫向，而非直直一行 */
+.ao {
+  display: flex;
+  text-decoration: none;
+}
+
+/* 頁尾間距 */
+.dz {
+  flex: 2;
+}
+
+/* 文字橫向 */
+.bv {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+
+/* Pack flex items from the start */
+.e0 {
+  -webkit-box-align: start;
+  align-items: flex-start;
+}
+
+/* 控制文字離頁尾最上面的高度及位置 */
+.ba {
+  flex: 1;
+  padding-top: 40px;
+}
+
+/* 文字排版設置 */
+.bc {
+  line-height: 24px;
+}
+
+/* 頁尾文字顏色、字型 */
+.cj {
+  color: #ffffff;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+/* 文字與文字的距離 */
+.e2 {
+  margin-bottom: 24px;
+}
+
+/* 文字顏色、大小 */
+.dt {
+  color: inherit;
+  font-size: 1.5em;
+}
+
+/* 文字被點選時的顏色 */
+.ao a:hover {
+  text-decoration: underline;
+  color: rgb(243, 1, 1);
+}
+
+/* <!-- 置頂按鈕 設定 --> */
+#myBtn {
+  z-index: 99;
+  /* 初始化不顯示 */
+  /* display: none; */
+  /* fixed = 畫面的絕對位置，所以會跟著跑 */
+  position: fixed;
+  /* 離下面30 pixel */
+  bottom: 30px;
+  /* 離右邊30 pixel */
+  right: 10px;
+  /* 半徑圓 */
+  border-radius: 30px;
+  /* 背景色 */
+  /* background-color: white; */
+  /* 透明度 */
+  opacity: 0.5;
+  /* 游標指過去會變手指 */
+  cursor: pointer;
+  /* 控制按鈕寬度 */
+  width: 50px;
+}
+
+/* Global settings */
+/* Global "table" column settings */
+.product-span {
+  float: left;
+  width: 15%;
+}
+.product-image {
+  float: left;
+  width: 10%;
+}
+
+.product-format {
+  float: left;
+  width: 10%;
+}
+
+.product-details {
+  float: left;
+  width: 30%;
+}
+
+.product-price {
+  float: left;
+  width: 10%;
+}
+
+.product-quantity {
+  float: left;
+  width: 10%;
+}
+
+.product-line-price {
+  float: left;
+  width: 10%;
+  white-space: nowrap;
+}
+
+.product-removal {
+  float: left;
+  width: 5%;
+  white-space: nowrap;
+}
+
+.group:before,
+.shopping-cart:before,
+.column-labels:before,
+.product:before,
+.totals-item:before,
+.group:after,
+.shopping-cart:after,
+.column-labels:after,
+.product:after,
+.totals-item:after {
+  content: "";
+  display: table;
+}
+
+.group:after,
+.shopping-cart:after,
+.column-labels:after,
+.product:after,
+.totals-item:after {
+  clear: both;
+}
+
+/* Apply clearfix in a few places */
+/* Apply dollar signs */
+/* 數字前加入$字號 */
+.product .product-price:before,
+.product .product-line-price:before,
+.totals-value:before {
+  content: "$";
+}
+
+h1 {
+  font-weight: 100;
+}
+
+label {
+  color: #aaa;
+}
+
+/* Column headers */
+.column-labels label {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+/* Product entries */
+.product {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+.product .product-image {
+  text-align: center;
+}
+.product .product-image img {
+  width: 100px;
+}
+
+.product .product-details .product-title {
+  margin-right: 20px;
+}
+.product .product-details .product-description {
+  margin: 5px 20px 5px 0;
+  line-height: 1.4em;
+}
+.product .product-quantity input {
+  width: 40px;
+}
+.product .remove-product {
+  border: 0;
+  padding: 4px 8px;
+  background-color: #c66;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+}
+.product .remove-product:hover {
+  background-color: #a44;
+}
+
+/* Totals section */
+.totals .totals-item {
+  float: right;
+  clear: both;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.totals .totals-item label {
+  float: left;
+  clear: both;
+  width: 79%;
+  text-align: right;
+}
+/* 控制結帳金額、運費、總金額位置 */
+.totals .totals-item .totals-value {
+  float: right;
+  width: 21%;
+  text-align: right;
+}
+
+.totals_view {
+  font-size: 1.5em;
+}
+.totals_view > div {
+  float: left;
+}
+.totals_view > div:nth-child(1) {
+  width: 83%;
+  text-align: right;
+}
+.totals_view > div:nth-child(2) {
+  padding-left: 1em;
+  float: right;
+  width: 17%;
+  text-align: center;
+}
+
+/* Make adjustments for tablet */
+@media screen and (max-width: 650px) {
+  .shopping-cart {
+    margin: 0;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+  }
+
+  .column-labels {
+    display: none;
+  }
+
+  .product-image {
+    float: right;
+    width: auto;
+  }
+  .product-image img {
+    margin: 0 0 10px 10px;
+  }
+
+  .product-details {
+    float: none;
+    margin-bottom: 10px;
+    width: auto;
+  }
+
+  .product-price {
+    clear: both;
+    width: 70px;
+  }
+
+  .product-quantity {
+    width: 100px;
+  }
+  .product-quantity input {
+    margin-left: 20px;
+  }
+
+  .product-quantity:before {
+    content: "x";
+  }
+
+  .product-removal {
+    width: auto;
+  }
+
+  .product-line-price {
+    float: right;
+    width: 70px;
+  }
+}
+/* Make more adjustments for phone */
+@media screen and (max-width: 350px) {
+  .product-removal {
+    float: right;
+  }
+
+  .product-line-price {
+    float: right;
+    clear: left;
+    width: auto;
+    margin-top: 10px;
+  }
+
+  .product .product-line-price:before {
+    content: "Item Total: $";
+  }
+
+  .totals .totals-item label {
+    width: 60%;
+  }
+  .totals .totals-item .totals-value {
+    width: 40%;
+  }
+}
+
+#procentext div > div > div > label {
+  float: left;
+}
+#procentext div > div > div > label:nth-child(1) {
+  width: 50%;
+  text-align: center;
+}
+#procentext div > div > div > label:nth-child(2) {
+  width: 15%;
+}
+#procentext div > div > div > label:nth-child(3) {
+  width: 11%;
+}
+#procentext div > div > div > label:nth-child(4) {
+  width: 10%;
+  text-align: center;
+}
+#procentext div > div > div > label:nth-child(5) {
+  width: 14%;
+  text-align: center;
+}
+
+.procentext_list > div {
+  float: left;
+}
+
+.procentext_list > div:nth-child(1) {
+  width: 10%;
+}
+.procentext_list > div:nth-child(1) > img {
+  width: 100%;
+}
+.procentext_list > div:nth-child(2) {
+  width: 40%;
+}
+.procentext_list > div:nth-child(3) {
+  width: 15%;
+}
+.procentext_list > div:nth-child(4) {
+  width: 11%;
+}
+.procentext_list > div:nth-child(5) {
+  width: 10%;
+  /* background-color: #a44; */
+  text-align: center;
+}
+.procentext_list > div:nth-child(6) {
+  width: 14%;
+  text-align: center;
+}
+
+.procentext_order {
+  width: 100% !important;
+  background-color: #c66;
+}
+
+#Confirm_Order {
+  font-family: "Noto Sans TC", sans-serif;
+  padding: 2em 2em 2em 0em;
+  margin: 100px;
+}
+#Confirm_Order > span {
+  margin-top: 10px;
+  margin-left: 1em;
+  display: inline-block;
+  font-size: 2em;
+}
+#Confirm_Order > div {
+  margin: 0px auto 20px auto;
+  padding: 1em;
+  border: 1px solid #aaa;
+  border-radius: 2em;
+}
+#Confirm_Order textarea {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.form-group input {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 2px;
+}
+.form-group label {
+  /* display: inline-block; */
+  width: 12%;
+  text-align: right;
+  white-space: nowrap;
+}
+.form-group select {
+  width: 30%;
+}
