@@ -7,11 +7,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/cerulean/bootstrap.min.css" rel="stylesheet" integrity="sha384-LV/SIoc08vbV9CCeAwiz7RJZMI5YntsH8rGov0Y2nysmepqMWVvJqds6y0RaxIXT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 
-    <title>Personal Page</title>
+    <title>要抒拉-個人頁面</title>
   </head>
   <body>
 
@@ -73,195 +73,203 @@
           </nav>
     </div>
 
-  <!-- ===main=== -->
-    <div class="container mt-5 personal-page">
-        <div class="row m-y-2 mt-5">
+  <!-- ======main=======個人頁面從這裡開始 -->
+  <form action="<c:url value='/personPage/updatePersonPage' />" method="POST"
+  enctype='multipart/form-data' id="personForm" class="mt-5 pt-3">
+    <div class="container rounded mt-5" id="personPage">
+        <div class="row my-5">
           <!-- 左側欄 -->
-            <div class="col-lg-3 pull-lg-8 text-xs-center mt-5 d-flex flex-column align-items-center">
+            <div class="col-lg-4 pull-lg-8 text-xs-center d-flex flex-column align-items-center" id="left">
               <!-- 編輯的按鈕 -->
-              <button class="btn btn-primary align-self-start" id="edit">編輯<i class='bx bx-edit ml-1'></i></button>
-              <div id="boxHeadPicture">
+              <!-- 套回jsp時可以換成筆 -->
+              <div id="boxHeadPicture" >
                 <!-- 大頭貼照 -->
-                <img src="https://icons-for-free.com/iconfiles/png/512/business+costume+male+man+office+user+icon-1320196264882354682.png" class="m-x-auto img-fluid img-circle" alt="avatar" id="headPicture">
+                <img src="https://icons-for-free.com/iconfiles/png/512/business+costume+male+man+office+user+icon-1320196264882354682.png" class="m-x-auto mt-5 img-fluid img-circle rounded-circle" style="border: 3px solid rgb(196,190,190)" alt="avatar" id="headPicture">
                 </div>
-                <label class="custom-file">
-                  <!-- 上傳檔案 -->
-                  <div id="boxFileSelect">
+                <label class="custom-file d-flex flex-column align-items-center">
+                
+                  <div id="boxFileSelect" class="d-flex text-center w-75 mx-auto mt-2 mb-1" >
+                      <!-- 上傳檔案 -->
 				<input name="memberMultipartFile" type="file"
 					style="visibility: hidden;" id="fileSelect"
-					value="${LoginOK.picture}" />
+          value="${LoginOK.picture}" class="w-100 " />
+          
+                  </div>
+                  <div class="text-center">
+                    <p class="mb-2"><strong>${LoginOK.memberId}</strong></p>
+                    <!-- 這裡的字可以再議 -->
+                    <p class="mb-2" style="font-size: small;">正式會員 | 天使3級</p>
+                  </div>
+                  <div class="card mx-auto text-center" style="width: 14rem;">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item" id="edit">編輯檔案<i class='bx bx-edit ml-1'></i></li>
+                      <li class="list-group-item">我的文章<i class='bx bx-file ml-1'></i></li>
+                      <li class="list-group-item">我的漂流信<i class='bx bx-paper-plane ml-1' ></i></i></li>
+                    </ul>
                   </div>
                 </label>
             </div>
             <!-- 右側欄 -->
-            <div class="col-lg-9 push-lg-4 mt-5">
+            <div class="col-lg-8 push-lg-4" id="left">
 
-                <div class="tab-content p-b-3">
-                        <h2 class="m-y-2">會員檔案</h2>
+                <div class="tab-content">
+                        <h2 class="m-y-2 mt-5 mb-4">會員檔案</h2>
 
-                        <form role="form">
                             <div class="form-group row">
                                 <label class="col-lg-2 col-form-label form-control-label personalTitle">帳號</label>
-                                <div class="col-lg-10">
+                                <div class="col-lg-8">
                                     <input class="form-control personal" type="text" value="${LoginOK.memberId}">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-2 col-form-label form-control-label personalTitle">性別</label>
-                                <div class="col-lg-10">
+                                <div class="col-lg-8">
                                     <input class="form-control" type="text" value="${LoginOK.gender}">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-lg-2 col-form-label form-control-label personalTitle">E-mail</label>
-                                <div class="col-lg-10">
-                                    <input class="form-control personalUpdate" type="email" value="${LoginOK.email}">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label form-control-label">生日</label>
-                                <div class="col-lg-10">
+                                <label class="col-lg-2 col-form-label form-control-label personalTitle">生日</label>
+                                <div class="col-lg-8">
                                     <input class="form-control" type="text" value="${LoginOK.birthday}">
                                 </div>
                             </div>
                             <div class="form-group row">
+                              <label class="col-lg-2 col-form-label form-control-label personalTitle">E-mail</label>
+                              <div class="col-lg-8">
+                                  <input class="form-control personalUpdate" type="email" value="${LoginOK.email}">
+                              </div>
+                          </div>
+                            <div class="form-group row">
                                 <label class="col-lg-2 col-form-label form-control-label personalTitle">手機</label>
-                                <div class="col-lg-10">
+                                <div class="col-lg-8">
                                     <input class="form-control personalUpdate" type="url" value="${LoginOK.phone}">
-                                </div>
-                            </div>
-                            <div class="form-group row personalUpdate">
-                                <label class="col-lg-2 col-form-label form-control-label"></label>
-                                <div class="col-lg-4">
-                                    <input class="form-control" id="city" type="text" value="{LoginOK.city}" placeholder="City">
-                                </div>
-                                <div class="col-lg-4">
-                                    <input class="form-control" id="area" type="text" value="${LoginOK.area}" placeholder="State">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-2 col-form-label form-control-label personalTitle">地址</label>
-                                <div class="col-lg-10">
-                                    <input class="form-control personalUpdate" id="address" type="text" value="" placeholder="${LoginOK.address}" >
+                                <div class="col-lg-8">
+                                    <input class="form-control personalUpdate" id="address" type="text" value="" placeholder="${LoginOK.city}${LoginOK.area}${LoginOK.address}" >
                                 </div>
                             </div>
 
 
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-form-label form-control-label"></label>
-                                <div class="col-lg-9">
-                                    <input type="submit" class="btn btn-secondary" id="btCancel" value="取消" style="visibility: hidden;"
+                            <div class="form-group row" >
+                                <div class="col-lg-10 d-flex justify-content-center">
+                                    <input type="submit" class="btn btn-secondary mr-2" style="visibility: hidden;" id="btCancel" value="取消" 
 								name="cancel">
-                                    <input class="btn btn-primary" id="btSubmit" type="submit" value="儲存"
-								style="visibility: hidden;" >
+                                    <input class="btn btn-primary ml-2" style="visibility: hidden;" id="btSubmit" type="submit" value="儲存"
+								 >
                                 </div>
                             </div>
-                        </form>
 
                 </div>
             </div>
 
         </div>
     </div>
+  </form>
         <!--========= footer================= -->
         <!-- Footer -->
-        <footer class="page-footer font-small stylish-color-dark pt-5">
+        <footer class="page-footer font-small stylish-color-dark pt-2" style="background-color: rgb(196, 190, 190);">
 
-            <!-- Footer Links -->
-            <div class="container text-center text-md-left">
-          
-              <!-- Grid row -->
-              <div class="row">
-          
-                <!-- Grid column -->
-                <div class="col-md-4 mx-auto">
-          
-                  <!-- Content -->
-                  <h5 class="font-weight-bold text-uppercase mt-3 mb-4">要抒啦！ 論壇&商城</h5>
-                  <p>是個能夠預期回應溫度的論壇空間。無論感情、生活、工作、時事都可以聊，還附設購物商城「要買啦！💸」，各種新奇有趣的商品都在這裡。</p>
-          
-                </div>
-                <!-- Grid column -->
-          
-                <hr class="clearfix w-100 d-md-none">
-          
-                <!-- Grid column -->
-                <div class="col-md-2 mx-auto">
-          
-                  <!-- Links -->
-                  <h5 class="font-weight-bold text-uppercase mt-3 mb-4">論壇</h5>
-          
-                  <ul class="list-unstyled">
-                    <li>
-                      <a href="#!">天使版</a>
-                    </li>
-                    <li>
-                      <a href="#!">惡魔版</a>
-                    </li>
-                    
-                  </ul>
-          
-                </div>
-                <!-- Grid column -->
-          
-                <hr class="clearfix w-100 d-md-none">
-          
-                <!-- Grid column -->
-                <div class="col-md-2 mx-auto">
-          
-                  <!-- Links -->
-                  <h5 class="font-weight-bold text-uppercase mt-3 mb-4">商城</h5>
-          
-                  <ul class="list-unstyled">
-                    <li>
-                      <a href="#!">商城首頁</a>
-                    </li>
-                    <li>
-                      <a href="#!">我的購物車</a>
-                    </li>
-                    <li>
-                      <a href="#!">歷史訂單</a>
-                    </li>
-                  </ul>
-          
-                </div>
-                <!-- Grid column -->
-          
-                <hr class="clearfix w-100 d-md-none">
-          
-                <!-- Grid column -->
-                <div class="col-md-2 mx-auto">
-          
-                  <!-- Links -->
-                  <h5 class="font-weight-bold text-uppercase mt-3 mb-4">關於我們</h5>
-          
-                  <ul class="list-unstyled">
-                    <li>
-                      <a href="#!">創站理念</a>
-                    </li>
-                    <li>
-                      <a href="#!">團隊介紹</a>
-                    </li>
-                    <li>
-                      <a href="#!">聯絡我們</a>
-                    </li>
-                  </ul>
-          
-                </div>
-                <!-- Grid column -->
-          
+          <!-- Footer Links -->
+          <div class="container text-center text-md-left">
+        
+            <!-- Grid row -->
+            <div class="row">
+              <div class="col-md-2 d-flex justify-content-center align-items-center" >
+                <img src="https://github.com/sun0722a/yaoshula/blob/master/src/logo/logo_trans_140px.png?raw=true" alt="" >
               </div>
-              <!-- Grid row -->
-          
-            </div>  
-          
-            <!-- Copyright -->
-            <div class="footer-copyright text-center pb-4">© 2020 Copyright © 2020 Speak It Up. All rights reserved
+              <!-- Grid column -->
+              
+              <div class="col-md-4 mx-auto" >
+        
+                <!-- Content -->
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-white">要抒啦！ 論壇&商城</h5>
+                <p id="footer-introdution">是個能夠預期回應溫度的論壇空間。無論感情、生活、工作、時事都可以聊，還附設購物商城「要買啦！💸」，各種新奇有趣的商品都在這裡。</p>
+        
+              </div>
+              <!-- Grid column -->
+        
+              <hr class="clearfix w-100 d-md-none">
+        
+              <!-- Grid column -->
+              <div class="col-md-2 mx-auto" >
+        
+                <!-- Links -->
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">論壇</h5>
+        
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#!">天使版</a>
+                  </li>
+                  <li>
+                    <a href="#!">惡魔版</a>
+                  </li>
+                  
+                </ul>
+        
+              </div>
+              <!-- Grid column -->
+        
+              <hr class="clearfix w-100 d-md-none">
+        
+              <!-- Grid column -->
+              <div class="col-md-2 mx-auto" >
+        
+                <!-- Links -->
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">商城</h5>
+        
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#!">商城首頁</a>
+                  </li>
+                  <li>
+                    <a href="#!">我的購物車</a>
+                  </li>
+                  <li>
+                    <a href="#!">歷史訂單</a>
+                  </li>
+                </ul>
+        
+              </div>
+              <!-- Grid column -->
+        
+              <hr class="clearfix w-100 d-md-none">
+        
+              <!-- Grid column -->
+              <div class="col-md-2 mx-auto ">
+        
+                <!-- Links -->
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">關於我們</h5>
+        
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#!">創站理念</a>
+                  </li>
+                  <li>
+                    <a href="#!">團隊介紹</a>
+                  </li>
+                  <li>
+                    <a href="#!">聯絡我們</a>
+                  </li>
+                </ul>
+        
+              </div>
+              <!-- Grid column -->
+        
             </div>
-            <!-- Copyright -->
-          
-          </footer>
-          <!-- Footer -->
+            <!-- Grid row -->
+        
+          </div>  
+        
+          <!-- Copyright -->
+          <div class="footer-copyright text-center pb-4">© 2020 Copyright © 2020 Speak It Up. All rights reserved
+          </div>
+          <!-- Copyright -->
+        
+        </footer>
+        <!-- Footer -->
     <!-- 下拉式地址 -->
 <script
 src="https://cdn.jsdelivr.net/npm/tw-city-selector@2.1.0/dist/tw-city-selector.min.js"></script>

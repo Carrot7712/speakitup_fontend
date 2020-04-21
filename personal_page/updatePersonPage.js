@@ -12,15 +12,15 @@ function doFirst() {
 
 
 	edit.addEventListener("click", update);
-
-	edit.addEventListener("mouseover", function() {
-		edit.style.border = "2px solid rgb(2, 117, 69)";
-		edit.style.background = "rgb(26, 202, 129)";
-	});
-	edit.addEventListener("mouseout", function() {
-		edit.style.border = "2px solid #fff";
-		edit.style.background = "rgb(118, 206, 169)";
-	});
+	//已寫css:hover取代
+	// edit.addEventListener("mouseover", function() {
+	// 	edit.style.border = "2px solid rgb(2, 117, 69)";
+	// 	edit.style.background = "rgb(26, 202, 129)";
+	// });
+	// edit.addEventListener("mouseout", function() {
+	// 	edit.style.border = "2px solid #fff";
+	// 	edit.style.background = "rgb(118, 206, 169)";
+	// });
 
 	// 在更動畫面裡，選擇照片後改變上面顯示的照片
 	fileSelect.addEventListener("change", function() {
@@ -40,12 +40,12 @@ function update() {
 	// 下拉式地址
 	new TwCitySelector();
 	// 下拉式地址
-	
-	edit.style.visibility = "hidden";
+	//
+	// edit.style.visibility = "hidden";
 	fileSelect.style.visibility = "visible";
 	btSubmit.style.visibility = "visible";
 	btCancel.style.visibility = "visible";
-	emailTitle.innerHTML = `<font color='red'>*&nbsp</font>E-mail：&nbsp&nbsp`;
+	emailTitle.innerHTML = `E-mail<font color='red'>&nbsp*</font>`;
 
 	// 抓原本表格上的值
 	oldemail = personalUpdates[0].innerText;
